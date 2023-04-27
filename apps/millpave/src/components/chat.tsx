@@ -19,6 +19,7 @@ const initialChatState = {
 	],
 	history: []
 };
+
 function Chat() {
 	const [open, setOpen] = useState(false);
 	const [draftText, setDraftText] = useState('');

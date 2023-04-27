@@ -44,7 +44,7 @@ const QA_TEMPLATE = PromptTemplate.fromTemplate(
 	- ALWAYS prefer the result with the highest "score" value.
 	- Ignore any content that is stored in html tables.
 	- The answer should only be based on the CONTEXT. Do not use any external sources. Do not generate the response based on the question without clear reference to the context.
-	- Your answer should be concise and conversational. Avoid unnecessary repetition and redundancy.
+	- Your answer should be under 50 words and conversational. Avoid unnecessary repetition and redundancy.
 	- It is IMPERATIVE that any link provided is found in the CONTEXT. Prefer not to provide a link if it is not found in the CONTEXT.
 	
 	CONVERSATION LOG: {conversationHistory}
@@ -135,6 +135,7 @@ export default async function handler(req: NextRequest) {
 
 			try {
 				console.log('Invoked Inner');
+				
 				const chat = new OpenAIChat({
 					modelName: 'gpt-3.5-turbo',
 					temperature: 0.5,
