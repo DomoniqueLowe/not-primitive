@@ -201,7 +201,7 @@ function Page() {
 				{/* Locations */}
 				<RevealSection
 					id="where-to-buy"
-					className="flex scroll-m-16 flex-col gap-8 md:flex-row md:items-center md:gap-16 lg:gap-32"
+					className="flex scroll-m-64 flex-col gap-8 md:flex-row md:items-center md:gap-16 lg:gap-32"
 				>
 					<div className="flex-1">
 						<p className="font-display text-lg">Our Locations</p>

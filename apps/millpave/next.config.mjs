@@ -18,8 +18,11 @@ export default defineNextConfig({
 		config.experiments = { ...config.experiments, topLevelAwait: true };
 		return config;
 	},
-
+	experimental:{
+		appDir: true
+	},
 	headers: async () => [
+
 		{
 			source: '/:all*(woff2|png|bin|gltf)',
 			locale: false,
